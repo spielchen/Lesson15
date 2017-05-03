@@ -1,0 +1,224 @@
+
+@font-face {
+	font-family: 'P22 Underground CY Pro';
+	src: url('../fonts/P22UndergroundCYPro-Heavy.eot');
+	src: url('../fonts/P22UndergroundCYPro-Heavy.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/P22UndergroundCYPro-Heavy.woff2') format('woff2'),
+		url('../fonts/P22UndergroundCYPro-Heavy.woff') format('woff'),
+		url('../fonts/P22UndergroundCYPro-Heavy.ttf') format('truetype'),
+		url('../fonts/P22UndergroundCYPro-Heavy.svg#P22UndergroundCYPro-Heavy') format('svg');
+	font-weight: 900;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'P22 Underground CY Pro';
+	src: url('../fonts/P22UndergroundCYPro-Thin.eot');
+	src: url('../fonts/P22UndergroundCYPro-Thin.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/P22UndergroundCYPro-Thin.woff2') format('woff2'),
+		url('../fonts/P22UndergroundCYPro-Thin.woff') format('woff'),
+		url('../fonts/P22UndergroundCYPro-Thin.ttf') format('truetype'),
+		url('../fonts/P22UndergroundCYPro-Thin.svg#P22UndergroundCYPro-Thin') format('svg');
+	font-weight: 100;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'P22 Underground CY Pro';
+	src: url('../fonts/P22UndergroundCYPro-Book.eot');
+	src: url('../fonts/P22UndergroundCYPro-Book.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/P22UndergroundCYPro-Book.woff2') format('woff2'),
+		url('../fonts/P22UndergroundCYPro-Book.woff') format('woff'),
+		url('../fonts/P22UndergroundCYPro-Book.ttf') format('truetype'),
+		url('../fonts/P22UndergroundCYPro-Book.svg#P22UndergroundCYPro-Book') format('svg');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'P22 Underground CY Pro';
+	src: url('P22UndergroundCYPro-Medium.eot');
+	src: url('P22UndergroundCYPro-Medium.eot?#iefix') format('embedded-opentype'),
+		url('P22UndergroundCYPro-Medium.woff2') format('woff2'),
+		url('P22UndergroundCYPro-Medium.woff') format('woff'),
+		url('P22UndergroundCYPro-Medium.ttf') format('truetype'),
+		url('P22UndergroundCYPro-Medium.svg#P22UndergroundCYPro-Medium') format('svg');
+	font-weight: 500;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'P22 Underground CY Pro';
+	src: url('P22UndergroundCYPro-Demi.eot');
+	src: url('P22UndergroundCYPro-Demi.eot?#iefix') format('embedded-opentype'),
+		url('P22UndergroundCYPro-Demi.woff2') format('woff2'),
+		url('P22UndergroundCYPro-Demi.woff') format('woff'),
+		url('P22UndergroundCYPro-Demi.ttf') format('truetype'),
+		url('P22UndergroundCYPro-Demi.svg#P22UndergroundCYPro-Demi') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+/*Basic settings*/
+html{
+	font-size: 10px;
+}
+input:focus{
+	outline: none;
+}
+a:focus{
+	outline:none;
+}
+/*Color Mixins*/
+@light:rgb(255,255,255);
+@dark:rgb(51, 51, 51);
+@header:rgb(255, 255, 51);
+
+/*Font Mixins*/
+.thin{
+	font-family: 'P22 Underground CY Pro';
+	font-weight: 100;
+}
+.heavy{
+	font-family: 'P22 Underground CY Pro';
+	font-weight: 900;
+}
+.book{
+	font-family: 'P22 Underground CY Pro';
+	font-weight: bold;
+}
+.header{
+	background: url('../img/bgr.jpg') no-repeat center center;
+	background-size: cover;
+	width: 100vw;
+	padding-top: 4rem;
+	&_logo-svg{
+		display: inline-block;
+		height: 5rem;
+		width: 10rem;
+		margin-right: 1rem;
+		margin-bottom: 2rem;
+	}
+	&_logo-text{
+		display: inline-block;
+		h2{
+			.heavy;
+			color:@light;
+			font-size: 1.5rem;
+			margin-bottom: 0;
+		}
+		p{
+			.thin;
+			font-size: 1rem;
+			color:@light;
+			margin-top: 0;
+		}
+	}
+	&_phone{
+		vertical-align: middle;
+		a{
+			display: inline-block;
+			color:@light;
+			.thin;
+			font-size: 1.5rem;
+			text-decoration: none;
+			padding: 1rem 3rem;
+			border:1px solid @light;
+			border-radius: 5px;
+			margin-right: 1rem;
+		}
+		p{
+			display: inline-block;
+			.heavy;
+			color:@light;
+			font-size: 2rem;
+		}
+	}
+}
+.mainscreen{
+	&_header{
+		color:@header;
+		text-transform: uppercase;
+		font-size: 1.8rem;
+		text-align: center;
+		.heavy;
+		margin-top: 5rem;
+	}
+	&_content{
+		margin-top: 12rem;
+		color:@light;
+		.book;
+		line-height: 2;
+		list-style-image:url('../img/li.svg');
+		font-size: 1.7rem;
+	}
+	&_form{
+		text-align: center;
+		background-color: @light;
+		padding: 2rem 0;
+		border-radius:5px;
+		margin-bottom: 5rem;
+		h3{
+			color:@dark;
+			.book;	
+			font-size: 2rem;
+		}
+		form{
+			height: auto;
+			input{
+			margin-bottom: 1rem;
+			padding: 1rem;
+			width: 70%;
+			border-radius: 0 5px 5px 0;
+			border: 1px solid rgb(204, 204, 204);
+			&:focus{
+				border: 1px solid rgb(51, 51, 51);
+			}
+		}
+		}
+		&-item{
+			margin: 0 auto;
+			span{
+				padding: 1.3rem 1.6rem;
+	 			height: 100%;
+				background-color: @dark;
+				border-radius:5px 0 0 5px;
+			}
+			img{
+				width: 1rem;
+				height: 1rem;
+			}
+
+		}
+	}
+}
+
+#btn-form{
+		color:@dark;
+		padding:1rem 0;
+		width: 80%;
+		background-color: @header;
+		border-radius:5px;
+		margin-bottom: 3rem;
+		border:none;
+		border-bottom:3px solid #999900;
+		&:focus{
+			outline:none;
+			padding:1rem 5rem;
+			background-color: @header;
+			border-radius:5px;
+		}
+	}
+::-webkit-input-placeholder {color:rgb(153, 153, 153);}
+::-moz-placeholder          {color:rgb(153, 153, 153);}/* Firefox 19+ */
+:-moz-placeholder           {color:rgb(153, 153, 153);}/* Firefox 18- */
+:-ms-input-placeholder      {color:rgb(153, 153, 153);}
+
+:focus::-webkit-input-placeholder {color: rgb(51, 51, 51);
+}
+:focus::-moz-placeholder          {color: rgb(51, 51, 51);
+}
+:focus:-moz-placeholder           {color: rgb(51, 51, 51);
+}
+:focus:-ms-input-placeholder      {color: rgb(51, 51, 51);
+}
+
